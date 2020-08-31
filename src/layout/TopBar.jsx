@@ -9,7 +9,7 @@ function TopBar() {
     <AppBar
       className="appbar"
       elevation={0}
-      position="fixed"
+      position="relative"
       color="transparent"
     >
       <Toolbar className="topbar_toolbar">

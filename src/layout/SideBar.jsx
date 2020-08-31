@@ -2,54 +2,47 @@ import React from "react";
 import {
   Drawer,
   Toolbar,
-  IconButton,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Button,
 } from "@material-ui/core";
-import {
-  ArrowBack,
-  DashboardRounded,
-  ShoppingCartRounded,
-} from "@material-ui/icons";
+import { DashboardRounded, ShoppingCartRounded } from "@material-ui/icons";
 import { GlobalContext } from "../GlobalContext";
+import { Link } from "react-router-dom";
 
 function SideBar() {
-  const { state, dispatcher } = React.useContext(GlobalContext);
+  const { state } = React.useContext(GlobalContext);
   return (
     <Drawer
       className="sidebar"
       open={state.drawer_state}
       elevation={1}
-      variant="temporary"
       hideBackdrop
     >
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          onClick={() => dispatcher({ type: "toggleDrawer" })}
-        >
-          <ArrowBack />
-        </IconButton>
-      </Toolbar>
+      <Toolbar></Toolbar>
       <List className="menuList">
-        <ListItem button>
-          <ListItemIcon>
-            <DashboardRounded />
-          </ListItemIcon>
-          <ListItemText
-            className="MenuText"
-            variant="h1"
-            primary="Dashboard"
-          ></ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ShoppingCartRounded />
-          </ListItemIcon>
-          <ListItemText className="MenuText" primary="My Cart"></ListItemText>
-        </ListItem>
+        <Link to="/">
+          <ListItem button>
+            <ListItemIcon>
+              <DashboardRounded />
+            </ListItemIcon>
+            <ListItemText
+              className="MenuText"
+              variant="h1"
+              primary="Dashboard"
+            ></ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/cart">
+          <ListItem button>
+            <ListItemIcon>
+              <ShoppingCartRounded />
+            </ListItemIcon>
+            <ListItemText className="MenuText" primary="My Cart"></ListItemText>
+          </ListItem>
+        </Link>
       </List>
     </Drawer>
   );

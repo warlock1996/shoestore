@@ -11,6 +11,19 @@
   font-weight: 500 !important;
   text-transform: capitalize !important;
 }
+.brandFont {
+  font-family: Bebas Neue !important;
+  font-weight: 500 !important;
+}
+.shoeCard {
+  margin-top: 30px !important;
+}
+.shoeCardMedia {
+  height: 300px;
+}
+.shoeCardActions {
+  justify-content: space-between !important;
+}
 svg {
   color: black !important;
 }

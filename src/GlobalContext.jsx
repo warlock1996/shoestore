@@ -20,6 +20,7 @@ const data = {
     },
   },
   drawer_state: false,
+  cart: {},
 };
 
 export const GlobalContext = React.createContext(data);
