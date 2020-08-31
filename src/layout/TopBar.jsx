@@ -1,21 +1,30 @@
 import React from "react";
-import {} from "@matera";
 import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { MenuRounded, ShoppingCartRounded } from "@material-ui/icons";
 import { GlobalContext } from "../GlobalContext";
 
 function TopBar() {
   const { dispatcher } = React.useContext(GlobalContext);
   return (
-    <AppBar className="appbar" position="fixed" color="transparent">
-      <Toolbar>
+    <AppBar
+      className="appbar"
+      elevation={0}
+      position="fixed"
+      color="transparent"
+    >
+      <Toolbar className="topbar_toolbar">
         <IconButton
           color="inherit"
           onClick={() => dispatcher({ type: "toggleDrawer" })}
         >
-          <MenuIcon />
+          <MenuRounded />
         </IconButton>
-        <Typography variant="h5">NIKE</Typography>
+        <Typography className="brandName" variant="h5">
+          The Shoe Store
+        </Typography>
+        <IconButton>
+          <ShoppingCartRounded />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );

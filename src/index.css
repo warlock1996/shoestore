@@ -1,17 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .appbar {
-  z-index: 1000 !important;
+  z-index: 1400 !important;
+  background-color: white !important;
+  border-bottom: 2px solid whitesmoke;
+}
+.topbar_toolbar {
+  justify-content: space-between;
+}
+.brandName {
+  font-family: Bebas Neue !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+}
+svg {
+  color: black !important;
+}
+.sidebar {
+  box-shadow: none !important;
+}
+.menuList {
+  width: 290px;
+}
+.MenuText span {
+  font-family: Bebas Neue !important;
+  font-size: 18px;
+  font-weight: 500 !important;
+  color: black !important;
 }
