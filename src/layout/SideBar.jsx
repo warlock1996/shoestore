@@ -6,7 +6,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Button,
 } from "@material-ui/core";
 import { DashboardRounded, ShoppingCartRounded } from "@material-ui/icons";
 import { GlobalContext } from "../GlobalContext";

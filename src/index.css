@@ -10,10 +10,12 @@
   font-family: Bebas Neue !important;
   font-weight: 500 !important;
   text-transform: capitalize !important;
+  text-decoration: none !important;
 }
 .brandFont {
   font-family: Bebas Neue !important;
   font-weight: 500 !important;
+  text-decoration: none !important;
 }
 .shoeCard {
   margin-top: 30px !important;
@@ -23,6 +25,25 @@
 }
 .shoeCardActions {
   justify-content: space-between !important;
+}
+.cartContainer {
+  margin-top: 50px !important;
+}
+.cartCard {
+  display: flex;
+}
+.cartCardContent {
+  flex: 1 !important;
+}
+.cartCardMedia {
+  flex: 1;
+  height: 150px;
+}
+.cartSummaryDivider {
+  border-left: 1px solid lightgrey;
+}
+.checkoutButton {
+  border: 1px solid black !important;
 }
 svg {
   color: black !important;
@@ -38,4 +59,9 @@ svg {
   font-size: 18px;
   font-weight: 500 !important;
   color: black !important;
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none !important;
+  color: black;
 }

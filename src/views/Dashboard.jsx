@@ -27,32 +27,47 @@ function Dashboard() {
       alignItems="center"
       alignContent="space-between"
     >
-      {Object.entries(state.shoes).map(([shoe, { name, img }]) => (
-        <Grid className="shoeCard" key={shoe} item xs={12} md={4}>
-          <Card variant="outlined" m={2}>
-            <CardMedia className="shoeCardMedia" image={img}></CardMedia>
-            <CardContent>
-              <Typography className="brandFont" variant="h5">
-                {name}
-              </Typography>
-            </CardContent>
-            <CardActions className="shoeCardActions">
-              <IconButton>
-                <FavoriteBorderRounded />
-              </IconButton>
-              <Button
-                onClick={() => addToCart({ [shoe]: { name: name, img: img } })}
-                variant="outlined"
-                startIcon={<ShoppingCartOutlined />}
-              >
-                <Typography className="brandFont" variant="h6">
-                  Add to cart
+      {Object.entries(state.shoes).map(
+        ([shoe, { name, img, price, quantity }]) => (
+          <Grid className="shoeCard" key={shoe} item xs={12} md={4}>
+            <Card variant="outlined" m={2}>
+              <CardMedia className="shoeCardMedia" image={img}></CardMedia>
+              <CardContent>
+                <Typography className="brandFont" variant="h5">
+                  {name}
                 </Typography>
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
+                <Typography className="brandFont" variant="h6">
+                  $ {price}
+                </Typography>
+              </CardContent>
+              <CardActions className="shoeCardActions">
+                <IconButton>
+                  <FavoriteBorderRounded />
+                </IconButton>
+                <Button
+                  onClick={() =>
+                    addToCart({
+                      [shoe]: {
+                        name: name,
+                        img: img,
+                        price: price,
+                        quantity: parseInt(quantity) + 1,
+                      },
+                    })
+                  }
+                  variant="outlined"
+                  startIcon={<ShoppingCartOutlined />}
+                >
+                  <Typography className="brandFont" variant="h6">
+                    {quantity ? "Added to cart " : "Add to cart "}
+                    {quantity ? quantity : "0"}
+                  </Typography>
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        )
+      )}
     </Grid>
   );
 }
