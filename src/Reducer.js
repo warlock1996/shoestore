@@ -17,7 +17,6 @@ export default (state, action) => {
       let newShoesAfterDeleting = Object.entries(state.shoes).map(
         ([shoe, obj]) => {
           if (shoe === action.payload) {
-            console.log([shoe, { ...obj, quantity: 0 }]);
             return [shoe, { ...obj, quantity: 0 }];
           }
           return [shoe, obj];

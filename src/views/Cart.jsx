@@ -23,7 +23,7 @@ function Cart() {
       alignItems="flex-start"
       justify="center"
     >
-      <Grid item xs={12} md={Object.entries(state.cart).length ? 6 : 0}>
+      <Grid item xs={12} md={Object.entries(state.cart).length ? 6 : false}>
         <Grid container direction="column" alignContent="stretch">
           {Object.entries(state.cart).map(
             ([shoe, { name, img, price, quantity }]) => (

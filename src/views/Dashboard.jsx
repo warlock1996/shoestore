@@ -17,7 +17,6 @@ import { GlobalContext } from "../GlobalContext";
 function Dashboard() {
   const { state, dispatcher } = React.useContext(GlobalContext);
   function addToCart(shoe) {
-    console.log(shoe);
     dispatcher({ type: "addToCart", payload: shoe });
   }
   return (
