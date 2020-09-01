@@ -44,4 +44,4 @@ jobs:
 
       # Deploying
       - name: Deploying App to Surge
-        run: surge ./dist shoestore_arslanali.surge.sh ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build shoestore_arslanali.surge.sh ${{ secrets.SURGE_TOKEN }}
